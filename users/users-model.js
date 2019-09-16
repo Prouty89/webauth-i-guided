@@ -5,6 +5,7 @@ module.exports = {
   find,
   findBy,
   findById,
+  validateLogin,
 };
 
 function find() {
@@ -28,4 +29,11 @@ function findById(id) {
   return db('users')
     .where({ id })
     .first();
+}
+
+function validateUser() {
+  return db('users')
+  .select('username', 'password')
+  .where('')
+
 }
