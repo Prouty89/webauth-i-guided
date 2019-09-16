@@ -26,7 +26,7 @@ server.post('/api/register', (req, res) => {
       res.status(500).json(error);
     });
 });
-
+// return bcrypt.js hash
 server.post('/api/login', (req, res) => {
   let { username, password } = req.body;
 
